@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Despesas</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main class="container">
+    <header>
+        <p class="eyebrow">Kotlin + Spring Boot</p>
+        <h1>Controle de Despesas</h1>
+        <p class="subtitle">Uma API simples com interface web integrada.</p>
+    </header>
+
+    <section class="summary-card">
+        <div>
+            <span>Total de despesas</span>
+            <strong id="total">R$ 0,00</strong>
+        </div>
+
+        <div>
+            <span>Total de despesas pagas</span>
+            <strong id="paid-total">R$ 0,00</strong>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Nova despesa</h2>
+
+        <form id="expense-form">
+            <label>
+                Descrição
+                <input id="description" type="text" placeholder="Ex.: Mercado" required>
+            </label>
+
+            <div class="form-grid">
+                <label>
+                    Valor
+                    <input id="amount" type="number" min="0.01" step="0.01" placeholder="0,00" required>
+                </label>
+
+                <label>
+                    Categoria
+                    <select id="category" required>
+                        <option value="">Selecione</option>
+                        <option>Alimentação</option>
+                        <option>Transporte</option>
+                        <option>Casa</option>
+                        <option>Lazer</option>
+                        <option>Outros</option>
+                    </select>
+                </label>
+            </div>
+
+            <label>
+                Data de Vencimento
+                <input id="dueDate" type="date" required>
+            </label>
+
+            <button type="submit">Adicionar despesa</button>
+
+            <p id="message" class="message"></p>
+        </form>
+    </section>
+
+    <section class="panel">
+        <div class="section-heading">
+            <h2>Despesas cadastradas</h2>
+            <button id="refresh" class="secondary">Atualizar</button>
+        </div>
+
+        <div id="expense-list" class="expense-list">
+            <p class="empty">Carregando despesas...</p>
+        </div>
+    </section>
+</main>
+
+<script src="/app.js"></script>
+</body>
+</html>
