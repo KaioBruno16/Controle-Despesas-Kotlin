@@ -36,7 +36,3 @@ http://localhost:8080
 - `GET /api/expenses/total` - mostra o total
 - `POST /api/expenses` - cadastra uma despesa
 - `DELETE /api/expenses/{id}` - exclui uma despesa
-
-## Observação
-
-Os dados são mantidos em memória e serão perdidos quando a aplicação for encerrada. O próximo passo pode ser integrar um banco MySQL ou H2.
