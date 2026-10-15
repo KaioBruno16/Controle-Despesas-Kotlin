@@ -29,10 +29,3 @@ Projeto simples de controle de despesas desenvolvido com Kotlin e Spring Boot.
 5. Abra no navegador:
 
 http://localhost:8080
-
-## Endpoints
-
-- `GET /api/expenses` - lista despesas
-- `GET /api/expenses/total` - mostra o total
-- `POST /api/expenses` - cadastra uma despesa
-- `DELETE /api/expenses/{id}` - exclui uma despesa
